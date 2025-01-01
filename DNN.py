@@ -6,7 +6,7 @@ def relu(x):
 
 
 def relu_derivative(x):
-    return np.where(x > 0, 1, 0)
+    return (x > 0).astype(float)
 
 
 def sigmoid(x):
