@@ -58,7 +58,7 @@ class DNN:
 
         dldz = (2/self.n * errors) * self.layers[-1].derivative(self.layers[-1].z)
         for i in range(len(self.layers)-1, -1, -1):
-            if i > 0
+            if i > 0:
                 dldw = (1 / self.n) * self.layers[i - 1].a.T @ dldz
             else:
                 dldw = (1 / self.n) * inputs.T @ dldz
